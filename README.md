@@ -5,6 +5,9 @@
 ```
 
 # Tessereact OCR
+
+Download tesseract from https://github.com/tesseract-ocr/tesseract/releases
+
 Copy screenshot names
 
 and paste them in an ocr.bat file e.g. like below (with the chcp 65001)
