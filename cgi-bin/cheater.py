@@ -29,7 +29,7 @@ for file in files:
         base, ext = os.path.splitext(file)
         txt_file_path = f"{directory}/{base}.txt"
         if(not os.path.exists(txt_file_path)):
-            result = subprocess.run(["tesseract", "--dpi", "96", f"{file}", f"{base}"], capture_output=True, text=True, cwd=directory)
+            result = subprocess.run(["tesseract", "--dpi", "96", "-l", "eng+ces", f"{file}", f"{base}"], capture_output=True, text=True, cwd=directory, shell = True, encoding="utf-8")
         
         if(os.path.exists(txt_file_path)):
             with open(txt_file_path, 'r', encoding="utf-8") as file: 
